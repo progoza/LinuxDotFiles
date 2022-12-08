@@ -1,0 +1,6 @@
+
+# samba shares
+//192.168.1.100/video /storage/video cifs credentials=/home/pawel/.local/credentials/storage,iocharset=utf8,file_mode=0755,dir_mode=0755,vers=2.0,user,noauto
+//192.168.1.100/music /storage/music cifs credentials=/home/pawel/.local/credentials/storage,iocharset=utf8,file_mode=0755,dir_mode=0755,vers=2.0,user,noauto
+//192.168.1.100/photo /storage/photo cifs credentials=/home/pawel/.local/credentials/storage,iocharset=utf8,file_mode=0755,dir_mode=0755,vers=2.0,user,noauto
+//192.168.1.100/Archiwum /storage/Archiwum cifs credentials=/home/pawel/.local/credentials/storage,iocharset=utf8,file_mode=0755,dir_mode=0755,vers=2.0,user,noauto

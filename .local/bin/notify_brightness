@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MESSAGE="Brightness set to "
+if [ "$1" == "up" ] ; then
+    MESSAGE="Brightness increased to "
+elif [ "$1" == "down" ] ; then 
+    MESSAGE="Brightness decreased to "
+fi
+
+NEW_LEVEL=`xbacklight -get`
+
+notify-send "$MESSAGE" -u low -h int:value:$NEW_LEVEL -h string:synchronous:brightness

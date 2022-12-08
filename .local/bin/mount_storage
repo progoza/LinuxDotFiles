@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$#" -eq "0" ] ; then
+    echo "Enter the name of the share to mount: video, photo, music or Archiwum"
+    exit 1
+fi
+if [ -d "/storage/$1" ] ; then
+    IS_SHARE_MOUNTED=`mount | grep "/storage/$1" | wc -l`
+    if [ ${IS_SHARE_MOUNTED} -eq 0 ] ; then
+        mount /storage/$1
+    fi
+else
+    echo "ERROR: $1 is not a valid name of the storage"
+    exit 2
+fi
