@@ -10,3 +10,5 @@ picom-jonaburg-git
 python-pulsectl
 rofi-connman
 volctl
+insect
+deadbeef

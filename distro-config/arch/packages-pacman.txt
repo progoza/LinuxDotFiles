@@ -37,3 +37,4 @@ ntfs-3g
 cdrkit
 usbutils
 gutenprint
+screen

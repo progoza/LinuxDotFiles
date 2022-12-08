@@ -147,12 +147,10 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/workdir/LinuxDotFiles.git/ --work-tree=$HOME'
-alias mls="mylin-stage arch"
-alias mlu="mylin-unstage arch"
 alias calc=insect
-alias sc="screen -S"
-alias sr="screen -r"
-alias sl="screen -ls"
+alias s-create="screen -S"
+alias s-reconn="screen -r"
+alias s-list="screen -ls"
 alias pacman-upgrade="sudo pacman -Syu"
 alias goto-storage-video="mount_storage video; cd /storage/video"
 alias goto-storage-photo="mount_storage photo; cd /storage/photo"
