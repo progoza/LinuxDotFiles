@@ -1,0 +1,4 @@
+enable bluetooth # bluettoth
+enable connman # COnnection manager
+enable cups # common printing server
+disable iwd # Intel wireless doeamon

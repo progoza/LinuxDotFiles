@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$#" -eq "0" ] ; then
+    echo "Enter the name of yay package to save"
+    exit 1
+fi
+
+FILE_WITH_PACKAGES=~/distro-config/arch/packages-yay.txt
+
+ALREADY_ON_LIST=`cat ${FILE_WITH_PACKAGES} | grep "^${1}$" | wc -l`
+
+if [ "${ALREADY_ON_LIST}" -eq "0" ] ; then
+    echo ${1} >> ${FILE_WITH_PACKAGES}
+    echo "Package ${1} added to list of yay packages"
+else
+    echo "Skipping - package ${1} already on yay packages list"
+fi 
