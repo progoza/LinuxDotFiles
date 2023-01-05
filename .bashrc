@@ -148,7 +148,7 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 fi
 
 if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
+  then PATH="$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/workdir/LinuxDotFiles.git/ --work-tree=$HOME'
