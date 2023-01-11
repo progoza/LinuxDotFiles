@@ -1,0 +1,43 @@
+#!/bin/bash
+
+PRIVACY_DATA=~/.local/privacy.tar.gpg
+TMPFS_DIR=/dev/shm/privacy_$USER
+
+open_privacy_dir () {
+    if [ ! -d $TMPFS_DIR ] ; then
+        mkdir -p -m 700 $TMPFS_DIR
+        cd $TMPFS_DIR
+        if [ -f $PRIVACY_DATA ] ; then
+            gpg --decrypt $PRIVACY_DATA | tar xf -
+        fi
+    fi
+    if [ ! -L ~/privacy ] ; then
+       ln -s $TMPFS_DIR ~/privacy
+    fi
+}
+
+flush_privacy_dir () {
+    if [ ! -d $TMPFS_DIR ] ; then
+        echo ERROR: privacy data directory not found
+    else
+        cd $TMPFS_DIR
+        tar c * | gpg --batch --yes --output $PRIVACY_DATA --encrypt --recipient pawel.rogoza@gmail.com
+    fi
+}
+
+close_privacy_dir () {
+    flush_privacy_dir
+    rm -f ~/privacy
+    rm -rf $TMPFS_DIR 
+}
+
+if [ "$1" == "open" ] ; then
+    open_privacy_dir
+elif [ "$1" == "flush" ] ; then
+    flush_privacy_dir
+elif [ "$1" == "close" ] ; then
+    close_privacy_dir
+else
+    echo "ERROR: unknown command $1, known commands: open, flush, close."
+fi
+
