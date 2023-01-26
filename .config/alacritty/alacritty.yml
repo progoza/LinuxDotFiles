@@ -871,4 +871,6 @@ key_bindings:
   - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
   - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
   - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
-
+  - { key: 53,        mods: Shift,         mode: Vi, action: SearchBackward    }
+  - { key: 5,         mods: Shift,         mode: Vi, action: Last              }
+  - { key: 7,         mods: Shift,         mode: Vi, action: FirstOccupied     }

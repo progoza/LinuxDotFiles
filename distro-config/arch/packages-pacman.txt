@@ -39,3 +39,5 @@ usbutils
 gutenprint
 screen
 figlet
+galculator
+vimiv
