@@ -151,8 +151,9 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 fi
 
-alias config='/usr/bin/git --git-dir=$HOME/workdir/LinuxDotFiles.git/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/src/LinuxDotFiles.git/ --work-tree=$HOME'
 alias calc=insect
+alias calendar=calcurse
 alias s-create="screen -S"
 alias s-reconn="screen -r"
 alias s-list="screen -ls"

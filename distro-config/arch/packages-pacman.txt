@@ -41,3 +41,6 @@ screen
 figlet
 galculator
 vimiv
+remmina
+freerdp
+qemu-full
