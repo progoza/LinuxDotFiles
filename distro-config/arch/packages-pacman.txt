@@ -27,7 +27,6 @@ connman
 wpa_supplicant
 bluez
 bluez-utils
-acpilightnodejs
 npm
 pavucontrol
 xreader
@@ -43,4 +42,4 @@ galculator
 vimiv
 remmina
 freerdp
-qemu-full
+obsidian

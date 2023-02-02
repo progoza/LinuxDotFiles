@@ -4,7 +4,6 @@ empty
 google-chrome
 gtk-theme-numix-solarized
 microsoft-edge-stable-bin
-nerd-fonts-complete
 onedrive-abraunegg
 picom-jonaburg-git
 python-pulsectl
