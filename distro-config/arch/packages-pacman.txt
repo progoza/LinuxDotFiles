@@ -43,3 +43,12 @@ vimiv
 remmina
 freerdp
 obsidian
+font-manager
+ttf-inconsolata-nerd
+x264
+x265
+libmpeg2
+xvidcore
+libvpx
+libtheora
+acpilight
