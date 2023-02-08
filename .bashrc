@@ -152,8 +152,12 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/src/LinuxDotFiles.git/ --work-tree=$HOME'
+
 alias calc=insect
 alias calendar=calcurse
+alias player=cmus
+alias podcasts=castero
+
 alias s-create="screen -S"
 alias s-reconn="screen -r"
 alias s-list="screen -ls"
