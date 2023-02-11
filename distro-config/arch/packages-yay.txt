@@ -10,5 +10,4 @@ python-pulsectl
 rofi-connman
 volctl
 insect
-deadbeef
 castero

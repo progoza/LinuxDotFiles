@@ -53,3 +53,10 @@ libvpx
 libtheora
 acpilight
 calcurse
+foomatic-db-gutenprint-ppds
+bash-completion
+xclip
+imagemagick
+perl-image-exiftool
+rhythmbox
+blueman

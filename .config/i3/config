@@ -225,7 +225,10 @@ bar {
     }
 }
 
-default_border pixel 2
+default_border pixel 3
+
+for_window [class=obsidian] border pixel 3
+
 
 bindsym $mod+m bar mode toggle
 
@@ -237,7 +240,7 @@ client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-  client.background       #2F8F8F2
+client.background       #2F8F8F2
 
 #############################
 ### settings for i3-gaps: ###
@@ -271,6 +274,7 @@ mode "$mode_gaps" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_inner" {
         bindsym plus  gaps inner current plus 5
         bindsym minus gaps inner current minus 5
