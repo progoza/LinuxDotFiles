@@ -131,9 +131,13 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws8 "8:Music"
+set $ws9 "9:Virt"
 set $ws10 "10"
+
+assign [class="Rhythmbox"] "8:Music"
+assign [class="Spotify"] "8:Music"
+assign [class="Virt-manager"] "9:Virt"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1

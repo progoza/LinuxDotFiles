@@ -60,3 +60,9 @@ imagemagick
 perl-image-exiftool
 rhythmbox
 blueman
+unzip
+meld
+openbox
+obconf
+lxappearance
+tint2
