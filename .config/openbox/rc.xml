@@ -550,6 +550,61 @@
         <direction>down</direction>
       </action>
     </keybind>
+    <!-- Keybindings for volume and brightness -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>BrightnessUp</name>
+        </startupnotify>
+        <command>~/.local/bin/chg_brightness.sh up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>BrightnessDown</name>
+        </startupnotify>
+        <command>~/.local/bin/chg_brightness.sh down</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VolumeUp</name>
+        </startupnotify>
+        <command>~/.local/bin/chg_volume.sh up</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VolumeUp</name>
+        </startupnotify>
+        <command>~/.local/bin/chg_volume.sh down</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VolumeMute</name>
+        </startupnotify>
+        <command>~/.local/bin/chg_volume.sh mute</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>VolumeMicMute</name>
+        </startupnotify>
+        <command>pactl set-source-mute @DEFAULT_SOURCE@ toggle</command>
+      </action>
+    </keybind>
     <!-- Keybindings for launching terminal -->
     <keybind key="W-Return">
       <action name="Execute">
