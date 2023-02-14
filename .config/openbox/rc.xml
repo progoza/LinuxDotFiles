@@ -177,7 +177,7 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <chainQuitKey>W-q</chainQuitKey>
+    <chainQuitKey>A-F4</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">

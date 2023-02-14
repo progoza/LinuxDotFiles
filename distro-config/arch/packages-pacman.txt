@@ -66,3 +66,4 @@ openbox
 obconf
 lxappearance
 tint2
+conky

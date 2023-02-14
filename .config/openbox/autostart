@@ -1,3 +1,5 @@
 tint2 &
 picom --experimental-backends &
 nitrogen --restore &
+/home/pawel/.local/bin/conky-startup.sh &
+
