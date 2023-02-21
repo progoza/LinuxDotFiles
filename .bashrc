@@ -143,12 +143,12 @@ ex ()
 
 export TERMINAL=alacritty
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
+    source /etc/profile.d/vte.sh
 fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] ; then 
+    PATH="$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 fi
 
 alias config='/usr/bin/git --git-dir=$HOME/src/LinuxDotFiles.git/ --work-tree=$HOME'
@@ -169,3 +169,11 @@ alias goto-storage-Archiwum="mount_storage Archiwum; cd /storage/Archiwum"
 alias prv-open="privacy open; cd ~/privacy"
 alias prv-flush="privacy flush"
 alias prv-close="privacy close; cd"
+
+### RANDOM COLOR SCRIPT ###
+# Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
+# Or install it from the Arch User Repository: shell-color-scripts
+colorscript random
+
+### SETTING THE STARSHIP PROMPT ###
+eval "$(starship init bash)"

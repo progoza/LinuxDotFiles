@@ -67,3 +67,6 @@ obconf
 lxappearance
 tint2
 conky
+mtpfs
+gvfs-mtp
+starship
