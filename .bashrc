@@ -148,8 +148,10 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
 fi
 
 if [ -d "$HOME/.local/bin" ] ; then 
-    PATH="$HOME/.local/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/.local/gems/bin:$HOME/bin:$HOME/.cargo/bin:$PATH"
 fi
+
+export GEM_HOME="$HOME/.local/gems"
 
 alias config='/usr/bin/git --git-dir=$HOME/src/LinuxDotFiles.git/ --work-tree=$HOME'
 
@@ -173,7 +175,11 @@ alias prv-close="privacy close; cd"
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
-colorscript random
+if [ -f /usr/local/bin/colorscript ] ; then 
+    colorscript random
+fi
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"
+
+source /home/pawel/.config/broot/launcher/bash/br

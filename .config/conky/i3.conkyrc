@@ -148,10 +148,10 @@ ${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${color2}${voffset 8}Hostname:${color} ${alignr}${nodename}
 ${color2}Kernel:${color}${alignr}${exec uname} ${exec uname -r}
 ${color2}Uptime:${color} ${alignr}${uptime}
-${color5}${font Roboto:size=10}P R O C E S S O R S  ${hr 2}${font}${color}
-${color2}CPU Freq:${color} $alignr${freq}MHz
+${color5}${voffset 8}${font Roboto:size=10}P R O C E S S O R S  ${hr 2}${font}${color}
+${color2}${voffset 8}CPU Freq:${color} $alignr${freq}MHz
 ${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
-${color2}History:${color} ${alignr}${cpugraph 8,100}
+${color2}History:${color} ${alignr}${cpugraph 10,100}
 ${color2}${offset 30}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
 ${color2}${offset 30}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
 ${color2}${offset 30}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
@@ -162,8 +162,8 @@ ${voffset 4}     1  -  ${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1}
      3  -  ${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
      4  -  ${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
      5  -  ${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}
-${color5}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
-${color2}${offset 30}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
+${color5}${voffset 8}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
+${color2}${voffset 8}${offset 30}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
 ${color2}${offset 30}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
 ${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
 ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_mem cpu 1} ${goto 274}${top_mem mem 1}
@@ -171,13 +171,12 @@ ${voffset 4}     1  -  ${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_me
      3  -  ${top_mem name 3}${alignr}${goto 170} ${goto 222}${top_mem cpu 3} ${goto 274}${top_mem mem 3}
      4  -  ${top_mem name 4}${alignr}${goto 170} ${goto 222}${top_mem cpu 4} ${goto 274}${top_mem mem 4}
      5  -  ${top_mem name 5}${alignr}${goto 170} ${goto 222}${top_mem cpu 5} ${goto 274}${top_mem mem 5}
-${color5}${font Roboto:size=10}D R I V E   ${hr 2}${font}${color}
-${offset 30}${color2}Root  -  SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
-${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda2}${alignr}${diskiograph_read sda2 8,100}
-${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda2}${alignr}${diskiograph_write sda2 8,100}
-
-${color5}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
-${color2}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs enp6s0}
-${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed wlan0}${alignr}${upspeedgraph wlan0 8,100}
-${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed wlan0}${alignr}${downspeedgraph wlan0 8,100}
+${color5}${voffset 8}${font Roboto:size=10}D R I V E   ${hr 2}${font}${color}
+${offset 30}${voffset 8}${color2}Root - SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
+${offset 30}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda2}${alignr}${diskiograph_read sda2 10,100 D9DDE2 D9DDE2 0 -t}
+${offset 30}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda2}${alignr}${diskiograph_write 10,100 D9DDE2 D9DDE2 0 -t}
+${color5}${voffset 8}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
+${color2}${voffset 8}${offset 30}IP Address: ${color} ${alignr}${offset -10$}${addrs wlan0}
+${color2}${offset 30}Eth Up:${color} ${alignr}${offset -10$}${upspeed wlan0}${alignr}${upspeedgraph wlan0 10,105 D9DDE2 D9DDE2 18}
+${color2}${offset 30}Eth Down:${color} ${alignr}${offset -10$}${downspeed wlan0}${alignr}${downspeedgraph wlan0 10,105 D9DDE2 D9DDE2 18}
 ]];
