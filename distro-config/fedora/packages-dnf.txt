@@ -31,12 +31,21 @@ bzip2-devel
 libffi-devel
 vlc
 cmus
+qemu
+onedrive 
+gtk3-devel gstreamer1-devel clutter-devel webkit2gtk3-devel libgda-devel gobject-introspection-devel
+libnotify-devel
+figlet
+pip
+python-setuptools python-requests python-dns python-psutil python-netifaces
+xclip
 
 #---------------
 # group install
 #---------------
  
 "C Development Tools and Libraries"
+sudo dnf group install --with-optional virtualization
 
 #-----
 # gem
@@ -85,4 +94,10 @@ obsidian
 com.visualstudio.code
 spotify
 org.freedesktop.Sdk.Extension.dotnet
+
+------------------------------
+
+onedrive --synchronize 
+systemctl --user enable onedrive
+systemctl --user start onedrive
 

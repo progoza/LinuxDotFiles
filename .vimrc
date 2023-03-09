@@ -1,9 +1,19 @@
+"##########################
+"#    ___  ___ 
+"#   / _ \/ _ \___  ___ _     ----------------------------
+"#  / ___/ , _/ _ \/ _ `/      https://github.com/progoza
+"# /_/  /_/|_|\___/\_, /      ----------------------------
+"#                /___/
+
 if has("gui_running")
 	set guioptions-=T  "toolbar
     set guioptions -=m "menus
 	set background=dark
 	colorscheme dracula
-    set guifont=Inconsolata\ Nerd\ Font\ Mono\ 11
+    set guifont=UbuntuMono\ Nerd\ Font\ 12
+    "set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ 11
+    "set guifont=Inconsolata\ Nerd\ Font\ Mono\ 11
+    "set guifont=JetBrains\ Mono\ Nerd\ Font\ 11
 endif
 set tabstop=4 shiftwidth=4 expandtab
 set nu
