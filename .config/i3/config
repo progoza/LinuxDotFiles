@@ -72,6 +72,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -modi drun -show-icons
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/rofi-exit
 bindsym $mod+Shift+f exec --no-startup-id rofi  -show find -modi find:~/.local/bin/rofi-finder.sh
+bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/rofi-emoji
 
 bindsym $mod+F2 exec --no-startup-id brave-browser
 bindsym $mod+Shift+F2 exec --no-startup-id google-chrome-stable

@@ -39,6 +39,7 @@ figlet
 pip
 python-setuptools python-requests python-dns python-psutil python-netifaces
 xclip
+arandr
 
 #---------------
 # group install
