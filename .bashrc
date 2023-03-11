@@ -175,9 +175,8 @@ alias prv-close="privacy close; cd"
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
-if [ -f /usr/local/bin/colorscript ] ; then 
-    colorscript random
-fi
+
+colorscript random
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"

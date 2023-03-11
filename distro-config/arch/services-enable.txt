@@ -1,3 +1,2 @@
 enable bluetooth # bluettoth
-enable connman # COnnection manager
 enable cups.servce # common printing server

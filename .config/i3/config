@@ -74,7 +74,7 @@ bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/rofi-exit
 bindsym $mod+Shift+f exec --no-startup-id rofi  -show find -modi find:~/.local/bin/rofi-finder.sh
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/rofi-emoji
 
-bindsym $mod+F2 exec --no-startup-id brave-browser
+bindsym $mod+F2 exec --no-startup-id brave
 bindsym $mod+Shift+F2 exec --no-startup-id google-chrome-stable
 bindsym $mod+F3 exec --no-startup-id thunderbird
 bindsym $mod+F6 exec --no-startup-id nemo
@@ -131,6 +131,7 @@ for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="File-roller"] floating enable
 for_window [class="gnome-calculator"] floating enable
+for_window [class="Arandr"] floating enable
 
 # focus the child container
 #bindsym $mod+d focus child
