@@ -1,0 +1,31 @@
+#!/bin/bash
+# exit session
+
+LOCK="Lock"
+LOGOUT="Logout $USER"
+SUSPEND="Suspend"
+SLEEP="Hybrid Sleep"
+REBOOT="Reboot"
+SHUTDOWN="Shutdown"
+
+CMD=$(echo -e "$LOCK\n$LOGOUT\n$SUSPEND\n$SLEEP\n$REBOOT\n$SHUTDOWN" | wofi -dmenu -i -l 10 "Session: ")
+case $CMD in
+  $LOCK)
+    sleep 0.5 && swaylock 
+    ;;
+  $LOGOUT)
+    swaymsg exit
+    ;;
+  $SUSPEND)
+    systemctl suspend
+    ;;
+  $SLEEP)
+    systemctl hybrid-sleep
+    ;;
+  $REBOOT)
+    systemctl reboot
+    ;;
+  $SHUTDOWN)
+    shutdown now
+    ;;
+esac

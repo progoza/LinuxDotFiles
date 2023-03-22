@@ -1,0 +1,2 @@
+sudo usermod -a -G video pawel
+sudo usermod -a -G wheel pawel

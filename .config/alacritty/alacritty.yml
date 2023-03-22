@@ -190,7 +190,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -874,3 +874,7 @@ key_bindings:
   - { key: 53,        mods: Shift,         mode: Vi, action: SearchBackward    }
   - { key: 5,         mods: Shift,         mode: Vi, action: Last              }
   - { key: 7,         mods: Shift,         mode: Vi, action: FirstOccupied     }
+
+env:
+    WINIT_X11_SCALE_FACTOR: "1"
+

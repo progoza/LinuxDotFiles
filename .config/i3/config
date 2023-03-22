@@ -43,16 +43,17 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id cbatticon -u 12 -i notification -r 3 -c "poweroff" -l 15 -o "xrandr --output eDP-1 --brightness 0.3"
 exec --no-startup-id /home/pawel/.local/bin/conky-startup.sh i3
+# exec --no-startup-id "sh -c 'sleep 6; flatpak run io.github.mimbrero.WhatsAppDesktop'"
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id ~/.local/bin/chg_brightness_xrandr.sh up && $refresh_i3status
-bindsym XF86MonBrightnessDown exec --no-startup-id ~/.local/bin/chg_brightness_xrandr.sh down && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id ~/.local/bin/chg_brightness.sh up && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id ~/.local/bin/chg_brightness.sh down && $refresh_i3status
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/chg_volume_pactl.sh up && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/chg_volume_pactl.sh down && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/chg_volume_pactl.sh mute && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.local/bin/chg_volume.sh up && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.local/bin/chg_volume.sh down && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id ~/.local/bin/chg_volume.sh mute && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -73,6 +74,9 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/rofi-exit
 bindsym $mod+Shift+f exec --no-startup-id rofi  -show find -modi find:~/.local/bin/rofi-finder.sh
 bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/rofi-emoji
+bindsym $mod+Shift+o exec --no-startup-id rofi-pass --insert
+bindsym $mod+Shift+p exec --no-startup-id rofi-pass
+
 
 bindsym $mod+F2 exec --no-startup-id brave
 bindsym $mod+Shift+F2 exec --no-startup-id google-chrome-stable
@@ -104,7 +108,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -127,11 +131,11 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 
-for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="File-roller"] floating enable
 for_window [class="gnome-calculator"] floating enable
 for_window [class="Arandr"] floating enable
+for_window [class="vlc"] floating enable
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -158,13 +162,13 @@ set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8:Music"
+set $ws7 "7:Music"
+set $ws8 "8:Whatsapp"
 set $ws9 "9:Virt"
 set $ws10 "10"
 
-assign [class="Rhythmbox"] "8:Music"
-assign [class="Spotify"] "8:Music"
+assign [class="Spotify"] "7:Music"
+assign [class="whatsapp-desktop-linux"] "8:Whatsapp"
 assign [class="Virt-manager"] "9:Virt"
 
 # switch to workspace
@@ -261,17 +265,18 @@ bar {
 
 default_border pixel 3
 
-for_window [class=obsidian] border pixel 3
+for_window [class="obsidian"] border pixel 3
 for_window [class="gnome-calendar"] border pixel 3
 for_window [class="File-roller"] border pixel 3
 for_window [class="gnome-calculator"] border pixel 3
 for_window [class="Gnome-screenshot"] border pixel 3
+for_window [class="Drawing"] border pixel 3
 
 bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused          #6272A4 #6272A4 #F8F8F2 #A272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555

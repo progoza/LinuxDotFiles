@@ -143,6 +143,8 @@ ex ()
 
 export TERMINAL=alacritty
 
+set -o vi
+
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
     source /etc/profile.d/vte.sh
 fi
@@ -176,9 +178,13 @@ alias prv-close="privacy close; cd"
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
 
-colorscript random
+if [ -f /usr/bin/colorscript ] ; then
+    colorscript random
+fi
 
 ### SETTING THE STARSHIP PROMPT ###
-eval "$(starship init bash)"
+if [ -f /usr/bin/starship ] ; then
+    eval "$(starship init bash)"
+fi
 
 source /home/pawel/.config/broot/launcher/bash/br
