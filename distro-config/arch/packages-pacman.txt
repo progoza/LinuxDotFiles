@@ -88,3 +88,5 @@ swaylock
 swayidle
 swaybg
 dmenu
+qt5ct
+plasma-desktop

@@ -10,3 +10,5 @@ castero
 broot
 pyradio
 shell-color-scripts
+dracula-kde-theme-git
+sddm-conf-git

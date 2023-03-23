@@ -143,7 +143,7 @@ ex ()
 
 export TERMINAL=alacritty
 
-set -o vi
+#set -o vi
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ] ; then
     source /etc/profile.d/vte.sh

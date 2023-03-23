@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PRIVACY_DATA=~/.local/privacy.tar.gpg
+PRIVACY_DATA=~/.local/privacy/privacy.tar.gpg
 TMPFS_DIR=/dev/shm/privacy_$USER
 
 open_privacy_dir () {
