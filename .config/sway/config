@@ -25,10 +25,11 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 ## set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --show drun -I 
+set $menu wofi --mode drun --show drun -I --normal-window
 
 ### Autostart
 exec --no-startup-id blueman-applet
+exec --no-startup-id dunst
 
 default_border pixel 3
 
@@ -106,6 +107,9 @@ input type:keyboard {
     bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wofi-exit
     bindsym $mod+Shift+f exec --no-startup-id wofi --show find -modi find:~/.local/bin/rofi-finder.sh
     bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/wofi-emoji
+
+    set $opacity 0.94
+    for_window [app_id="wofi"] opacity $opacity, floating enable, sticky enable, border pixel 0
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -311,6 +315,29 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
+
+
+
+######################
+### Screen capture ###
+######################
+
+set $screenshot 1 screen to file, 2 selected to file, 3 screen to clipboard, 4 selected to clipboard
+mode "$screenshot" {
+    bindsym 1 exec 'grimshot save output', mode "default"
+    bindsym 2 exec 'grimshot save area', mode "default"
+    bindsym 3 exec 'grimshot copy output', mode "default"
+    bindsym 4 exec 'grimshot copy area', mode "default"
+
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Print mode "default"
+}
+
+bindsym $mod+Print mode "$screenshot"
+
+
 
 #############################
 ### settings for i3-gaps: ###

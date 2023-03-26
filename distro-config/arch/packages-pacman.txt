@@ -90,3 +90,5 @@ swaybg
 dmenu
 qt5ct
 plasma-desktop
+grimshot
+grim
