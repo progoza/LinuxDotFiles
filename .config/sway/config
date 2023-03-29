@@ -28,7 +28,8 @@ set $term alacritty
 set $menu wofi --mode drun --show drun -I --normal-window
 
 ### Autostart
-exec --no-startup-id blueman-applet
+exec blueman-applet
+exec nm-applet --indicator
 exec --no-startup-id dunst
 
 default_border pixel 3
@@ -105,8 +106,8 @@ input type:keyboard {
     # Start your launcher
     bindsym $mod+d exec $menu
     bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wofi-exit
-    bindsym $mod+Shift+f exec --no-startup-id wofi --show find -modi find:~/.local/bin/rofi-finder.sh
     bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/wofi-emoji
+    bindsym $mod+Shift+p exec --no-startup-id wofi-pass -t
 
     set $opacity 0.94
     for_window [app_id="wofi"] opacity $opacity, floating enable, sticky enable, border pixel 0
@@ -234,7 +235,7 @@ input type:keyboard {
 # Theme
 #
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #B272A4   #6272A4
+client.focused          #6272A4 #6272A4 #F8F8F2 #B272A4   #F272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
@@ -315,8 +316,6 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-
-
 
 ######################
 ### Screen capture ###

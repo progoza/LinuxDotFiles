@@ -92,3 +92,4 @@ qt5ct
 plasma-desktop
 grimshot
 grim
+wtype
