@@ -188,3 +188,5 @@ if [ -f /usr/bin/starship ] ; then
 fi
 
 source /home/pawel/.config/broot/launcher/bash/br
+
+alias iv="feh --scale-down -B#181a26 -g 1024x768 ."

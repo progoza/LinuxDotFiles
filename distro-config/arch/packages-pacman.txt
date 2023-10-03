@@ -93,3 +93,7 @@ plasma-desktop
 grimshot
 grim
 wtype
+pipewire-pulse
+wireplumber
+dosfstools
+mtools

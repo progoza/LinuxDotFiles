@@ -83,13 +83,13 @@ editor_backup_extension=~
 editor_filesize_threshold=64M
 editor_stop_format_chars=-+*\\,.;:&>
 mcview_eof=
-skin=modarin256root-defbg
+skin=julia256
 
 filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=57
+left_panel_size=135
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -112,12 +112,14 @@ autodetect_codeset=
 clipboard_store=
 clipboard_paste=
 
-spell_language=en
-
 [Colors]
 base_color=
-xterm-256color=
+foot=
 color_terminals=
+
+foot-extra=
+
+alacritty=
 
 [Panels]
 show_mini_info=true
@@ -141,7 +143,7 @@ quick_search_mode=2
 select_flags=6
 
 [Panelize]
-Modyfikowane pliki git=git ls-files --modified
-Znajdź odrzuty po łataniu=find . -name \\*.rej -print
-Znajdź pliki *.orig po łataniu=find . -name \\*.orig -print
 Znajdź programy SUID i SGID=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
+Znajdź pliki *.orig po łataniu=find . -name \\*.orig -print
+Znajdź odrzuty po łataniu=find . -name \\*.rej -print
+Modyfikowane pliki git=git ls-files --modified

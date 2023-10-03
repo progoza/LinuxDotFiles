@@ -25,7 +25,7 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 ## set $menu dmenu_path | dmenu | xargs swaymsg exec --
-set $menu wofi --mode drun --show drun -I --normal-window
+set $menu wofi --mode drun --show drun -I -i
 
 ### Autostart
 exec blueman-applet
@@ -107,10 +107,10 @@ input type:keyboard {
     bindsym $mod+d exec $menu
     bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wofi-exit
     bindsym $mod+Shift+m exec --no-startup-id ~/.local/bin/wofi-emoji
-    bindsym $mod+Shift+p exec --no-startup-id wofi-pass -t
 
-    set $opacity 0.94
-    for_window [app_id="wofi"] opacity $opacity, floating enable, sticky enable, border pixel 0
+    for_window [class="feh"] floating enable, sticky enable
+
+    for_window [app_id="wofi"] floating enable, sticky enable, border pixel 0
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -158,9 +158,9 @@ input type:keyboard {
     set $ws4 "4"
     set $ws5 "5"
     set $ws6 "6"
-    set $ws7 "7:Spotify"
-    set $ws8 "8:Whatsapp"
-    set $ws9 "9:Virt"
+    set $ws7 "7:7:Spotify"
+    set $ws8 "8:8:Whatsapp"
+    set $ws9 "9:9:Virt"
     set $ws10 "10"
     assign [class="Spotify"] "7:Spotify"
     assign [class="whatsapp-desktop-linux"] "8:Whatsapp"
